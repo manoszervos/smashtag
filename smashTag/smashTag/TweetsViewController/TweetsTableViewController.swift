@@ -33,11 +33,14 @@ class TweetsTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    var textToSearch: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        searchText = "#stanford"
         tableView.estimatedRowHeight = 120
         tableView.rowHeight = UITableViewAutomaticDimension
+        searchText = textToSearch
     }
 
     private func twitterRequest() -> Twitter.Request? {

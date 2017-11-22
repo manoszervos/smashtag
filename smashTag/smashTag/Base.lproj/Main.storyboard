@@ -78,7 +78,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textField key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="CTV-sJ-u35">
+                        <textField key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="CTV-sJ-u35">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <nil key="textColor"/>
@@ -236,6 +236,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HH5-wr-l4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2448.8000000000002" y="-316.19190404797604"/>
+        </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="EiG-YG-Rfx">
+            <objects>
+                <viewController storyboardIdentifier="WebViewViewController" id="ECk-kg-cgS" customClass="WebViewViewController" customModule="smashTag" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bT-3v-rh2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPH-5d-bXo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dPH-5d-bXo" firstAttribute="top" secondItem="8bT-3v-rh2" secondAttribute="top" id="1sQ-8r-rU8"/>
+                            <constraint firstItem="dPH-5d-bXo" firstAttribute="leading" secondItem="1qm-HO-J71" secondAttribute="leading" id="BHP-ZV-Lwe"/>
+                            <constraint firstItem="1qm-HO-J71" firstAttribute="bottom" secondItem="dPH-5d-bXo" secondAttribute="bottom" id="vqm-lA-2KJ"/>
+                            <constraint firstItem="1qm-HO-J71" firstAttribute="trailing" secondItem="dPH-5d-bXo" secondAttribute="trailing" id="zMk-nt-wFd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1qm-HO-J71"/>
+                    </view>
+                    <connections>
+                        <outlet property="tweetWebView" destination="dPH-5d-bXo" id="Dxq-nC-6dQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nw2-EZ-Yz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3180" y="-322.48875562218893"/>
         </scene>
         <!--Tweets-->
         <scene sceneID="AH9-NK-yGv">
